@@ -71,10 +71,10 @@ def createSDG(request):
         tempPath = '' + fileName
 
         aws_session = boto3.Session(
-            'AKIA4MOGBY7IC4JUNLNA', 'UE5zAcP/n8UdjzYYUCVbuSlI6AC/VaOfdJcJ80he')
+            aws_access_key_id, aws_secret_access_key)
         s3 = aws_session.resource('s3')
-        # s3 = boto3.client('s3', aws_access_key_id='AKIA4MOGBY7IC4JUNLNA',
-        #                   aws_secret_access_key='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')
+        # s3 = boto3.client('s3', aws_access_key_id=aws_access_key_id,
+        #                   aws_secret_access_key=aws_secret_access_key)
 
         # # print(tempPath)
         print(s3)
